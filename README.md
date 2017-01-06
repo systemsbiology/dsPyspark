@@ -22,10 +22,25 @@ spark-submit dsSeqModel.py -i examples/CODIS_spark_input.txt -o CODIS_output -s 
 Note: D21S11 is too long for a 156 bp read, so it requires a match count (mc) setting of 2 to match CODIS allele 
 and it will output an incorrect allele count because the read cannot span the full allele sequence.
 
-Requires Pyspark >= 2.x
+Requires Pyspark >= 2.x, TRAL, and TRF
 
-Workflow
+# Installation
+
+Install Spark
+https://spark.apache.org/downloads.html
+
+Install TRAL
+http://elkeschaper.github.io/tral/
+> pip install TRAL
+
+Install TRF
+http://tandem.bu.edu/trf/trf.html
+
+
+
+# Workflow
 1) use streamFastqTransform.py in parallel to upload FASTQ files to a HDFS
+
 2) use dsSeqModel.py to analyze files
 
 A Docker repository will be available soon.
