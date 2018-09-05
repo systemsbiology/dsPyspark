@@ -1,6 +1,6 @@
 # Duplex Sequence Pyspark Processing Pipeline
 
-This takes two paired end FASTQ files and analyses them for Duplex Sequencing amplicons then matches valied Duplex 
+This takes two paired end FASTQ files and searches for Duplex Sequencing amplicons, then matches valid Duplex 
 Sequencing Duplex Consensus Sequences against CODIS sequences.
 
 1) python3 streamFastqTransform.py -s1 seq1.fastq -s2 seq2.fastq -o sample_spark_input.txt
